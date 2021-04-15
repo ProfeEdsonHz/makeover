@@ -1,0 +1,86 @@
+/* ------------------------------
+Editado 14 de Abril 2021
+--------------------------------*/
+* {
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	font-family: 'Bebas Neue';
+	font-size: 1.2rem;
+	min-height: 100%;
+	background-color: #999999;
+}
+
+.grid-container {
+	display: grid;
+	grid-gap: 10px;
+
+	grid-template: 
+		"H" auto
+		"N" auto
+		"M" 10rem
+		"A" auto
+		"F" auto;
+}
+
+.grid-container > * {
+	box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+	border-radius: 4px;
+	padding: 10px;
+	text-align: center;
+}
+
+
+header {
+	grid-area:H;
+	background-color: tomato;
+}
+nav {
+	grid-area:N;
+	background-color: tomato;
+}
+section {
+	grid-area:M;
+	background-color: tomato;
+}
+aside	{
+	grid-area:A;
+	background-color: tomato;
+}
+footer {
+	grid-area:F;
+	background-color: tomato;
+}
+
+@media (min-width: 640px) {
+	.grid-container {
+		grid-template:
+		"H 	H" 4rem
+		"N 	N" 2rem
+		"M 	A" auto
+		"F 	F" 3rem /
+		65% 35%
+		;
+	}
+}
+
+@media (min-width: 768px) {
+	.grid-container {
+		grid-template:
+		"H 	H 	H" 4rem
+		"N 	M 	A" auto
+		"F 	F 	F" 3rem /
+		15% 55% 30%
+		;
+	}
+}
+/* ------------------------------
+Por Edson Hernández
+--------------------------------*/
